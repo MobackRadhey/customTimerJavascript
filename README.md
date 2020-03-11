@@ -3,21 +3,26 @@ Asnchronous Non-blocking custom setTimeout Functionality
 using webworkers(API)
 
 cTimer is the Object which is Exposed.
- 
-function:
-callTimeout(callback, milliseconds)
-args {function} callback
-     {int} milliseconds
-returns {Object} worker
-
-function:
-cTimer.cancelTimeout(worker)
-args {Object} worker
-returns null
+ ```
+/**
+ * @function callTimeout
+ * @param {function} callback
+ * @param {number} milliseconds
+ * @returns {Object} worker
+ * @description takes a callback function and time in milliseconds, starts the timer using a 
+ * worker thread and returns a worker reference as an object 
+ */
+/**
+ * @function cancelTimeout
+ * @param {Object} worker
+ * @returns {null}
+ * @description takes a already created worker reference as input, cancels the timer 
+ * (terminates the worker thread) 
+ */
 
 working Example:
 
-let ct = CTimer.callTimeout(()=>{
+let ct = cTimer.callTimeout(()=>{
     console.log(1);
 }, 4000);
 
