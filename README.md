@@ -1,4 +1,4 @@
 # customTimerJavascript
-
-This is done using webworkers(API)
+Asnchronous Non-blocking custom setTimeout Functionality
+using webworkers(API)
 
